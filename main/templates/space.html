@@ -1,0 +1,199 @@
+{% extends 'basic.html' %}
+<!-- {% block css %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'main/style4.css' %}">
+{% endblock %} -->
+
+{% block body %}
+
+<div class="q-contianer">
+  <p class="quote">At night, when the sky is full of stars and the sea is still you get the wonderful sensation
+    that you are floating in space.<br>-Natalie Wood</p>
+</div>
+<div class="row mb-2 news">
+  {% for b in blog %}
+  {% if forloop.counter <= 2 %} <div class="col-md-6 n1">
+    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+      style="background-color: black;">
+      <div class="col p-4 d-flex flex-column position-static">
+        <strong class="d-inline-block mb-2 text-primary">{{b.author}}</strong>
+        <h3 class="mb-0"><b>{{b.b_title}}</b></h3>
+        <div class="mb-1 text-muted">{{b.pub_date}}</div>
+        <p class="card-text mb-auto">{{b.content|slice:"40"}}</p>
+        <a href="#" class="stretched-link">Continue reading</a>
+      </div>
+      <div class="col-auto tumbnail">
+        <img class="thumb-img" src="{{b.image}}" alt="Thumbnail">
+      </div>
+    </div>
+</div>
+{% endif %}
+{% endfor %}
+</div>
+<!-- </div> -->
+</section>
+
+<section id="info">
+  <div class="About-us">
+    <h2 style="text-align: center;">About Us</h2>
+    <hr style="align-self: center; width: 10rem;">
+    <div class="know-us">
+      <p>
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+        in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+        officia deserunt mollit anim id est laborum."
+      </p>
+    </div>
+  </div>
+  <!-- BLOGS -->
+
+  <div class="blogs">
+    <b>
+      <h3 class="title">Astro-Blogs</h3>
+    </b>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true"></button>
+
+        {% for i in range %}
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{i}}"></button>
+        <!-- aria-label="Slide 3" -->
+        {% endfor %}
+      </div>
+      <hr>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          {% for i in news %}
+          <article class="b blog2">
+            <header class="head1">
+              <h2><b>{{i.head}}</b></h2>
+              <div class="post-block__meta">
+                <div class="river-byline">
+                  <span class="river-byline__authors">
+                    <span>
+                      <a aria-label="Posts by Jacquelyn Melinek" href="/author/jacquelyn-melinek/">
+                        {{i.author}}
+                      </a>
+                    </span>
+                  </span>
+                  <div class="doa">
+                    <time class="river-byline__full-date-time" datetime="2022-09-13T16:00:07">
+                      9:30 PM GMT+5:30
+                      <span class="full-date-time__separator">•</span>
+                      {{i.pub_date}}
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </header>
+            <div class="post-content">
+              {{i.content|slice:"150"}}
+              <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <footer class="news-foot">
+              <figure class="post-img">
+                <img src="/{{i.image}}" alt="" style="width: 250px; height: 250px;">
+                <!-- {% static 'main/spacex_rocket.jfif' %} -->
+                <figcaption> Kennedy Space Center, LC-39A</figcaption>
+              </figure>
+            </footer>
+          </article>
+          <!--  forloop.counter|divisibleby:1 and  -->
+          {% if forloop.counter|divisibleby:1 and forloop.counter > 0 and not forloop.last %}
+        </div>
+        <div class="carousel-item">
+          {% endif %}
+
+          {% endfor %}
+        </div>
+      </div>
+      <hr>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="false"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="false"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
+<!-- PLanet Rides -->
+<section id="dark">
+  <div class="start-of" style="margin-bottom: 30px;">
+    <p class="brand-name">Space Odyssey</p>
+  </div>
+  <div class="planet row">
+    <div class="col-4">
+      <img src="{% static 'main/m.png' %}" alt="Mercury" class="pimg">
+    </div>
+    <div class="planets col-6">
+      <b>
+        <h2 class="title">MERCURY</h2>
+      </b>
+      <p class="news pinfo">
+        Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes
+        87.97 Earth days, the shortest of all the Sun's planets. It is named after the Roman god Mercurius (Mercury),
+        god of commerce, messenger of the gods, and mediator between gods and mortals, corresponding to the Greek god
+        Hermes (Ἑρμῆς).</p>
+      <button type="button" class="btn btn-light">Mercury Updates</button>
+    </div>
+  </div>
+  <div class="planet row">
+    <div class="planets col-6">
+      <b>
+        <h2 class="title">VENUS</h2>
+      </b>
+      <p class="news pinfo">
+        Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes
+        87.97 Earth days, the shortest of all the Sun's planets. It is named after the Roman god Mercurius (Mercury),
+        god of commerce, messenger of the gods, and mediator between gods and mortals, corresponding to the Greek god
+        Hermes (Ἑρμῆς).</p>
+      <button type="button" class="btn btn-light">Venus Updates</button>
+    </div>
+    <div class="col-4">
+      <img src="{% static 'main/venus.png' %}" alt="Mercury" class="pimg">
+    </div>
+  </div>
+  <div class="planet row">
+    <div class="col-4">
+      <img src="{% static 'main/Earth.png' %}" alt="Mercury" class="pimg">
+    </div>
+    <div class="planets col-6">
+      <b>
+        <h2 class="title">EARTH</h2>
+      </b>
+      <p class="news pinfo">
+        Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes
+        87.97 Earth days, the shortest of all the Sun's planets. It is named after the Roman god Mercurius (Mercury),
+        god of commerce, messenger of the gods, and mediator between gods and mortals, corresponding to the Greek god
+        Hermes (Ἑρμῆς).</p>
+      <button type="button" class="btn btn-light">Earth Updates</button>
+    </div>
+  </div>
+  <div>
+    <button type="button" class="btn btn-dark">For More Planetary Updates</button>
+  </div>
+</section>
+<section class="Contact">
+  <div>
+
+  </div>
+</section>
+<footer id="footer">
+  <i class="fa-brands fa-facebook foot"></i>
+  <i class="fa-brands fa-twitter foot"></i>
+  <i class="fa-brands fa-instagram foot"></i>
+  <i class="fa-solid fa-envelope foot"></i>
+  <p>© Copyright SpaceOdssey</p>
+</footer>
+{% endblock %}

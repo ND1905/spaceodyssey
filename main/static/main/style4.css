@@ -1,0 +1,188 @@
+body {
+    text-align: center;
+    margin: 0;
+    font-family: Montserrat;
+    height: 100%;
+}
+
+/* Atom */
+#atom {
+    background-image: url(space-g8996fb908_1920.jpg);
+}
+
+.container-fluid {
+    padding: 1% 3% 10%;
+}
+
+.navbar-brand {
+    font-family: "Ubuntu";
+    font-size: 2rem;
+    padding: 0 18px;
+}
+
+.nav-item {
+    padding: 0px 18px;
+}
+
+.quote {
+    text-align: center;
+    font-family: serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 4% 8% 4%;
+    color: aliceblue;
+}
+
+/* news cards */
+.news {
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 3% 3% 3%;
+}
+
+.n1 {
+    padding: 20px 30px;
+    text-align: left;
+    font-family: Montserrat;
+}
+
+/* info */
+#info {
+
+    /* margin: 25px 0px; */
+}
+
+.About-us {
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+}
+
+.know-us {
+    margin: 50px 300px;
+
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.form-inline {
+    display: flex;
+    width: 400px;
+}
+
+/* blogs */
+a:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.blogs {
+    padding: 40px 100px;
+    background-image: url(bubble.jpg);
+    background-size: cover;
+    /* background-position: 50%; */
+    margin: 50px 0px;
+    color: aliceblue;
+    /* height: 500px; */
+}
+
+.title {
+    font-weight: 400;
+    letter-spacing: 4px;
+    font-family: Poppins, sans-serif;
+}
+
+.b {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    margin-left: 210px;
+    margin-right: 210px;
+}
+
+.head1 {
+    padding: 0 20px 10px 0px;
+    font-family: sans-serif;
+    width: 400px;
+}
+
+.post-content {
+    padding: 0 0 10px 20px;
+    width: 600px;
+}
+
+figcaption {
+    font-size: 0.7rem;
+}
+
+.thumb-img {
+    width: 200px;
+    height: 250px;
+}
+
+.mm {
+    height: 250px;
+    width: 250px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background: black;
+}
+
+/* section dark */
+#dark {
+    background-color: black;
+    padding: 30px;
+}
+
+.brand-name {
+    font-family: 'Cinzel', serif;
+    color: azure;
+    font-size: 5rem;
+}
+
+.pimg {
+    width: 350px;
+    height: 350px;
+}
+
+.title {
+    font-family: 'Cinzel', serif;
+    color: whitesmoke;
+}
+
+.planets {
+    align-self: center;
+    margin: 70px;
+}
+
+/* footer */
+#footer {
+    margin: 60px auto auto auto;
+}
+
+.foot {
+    padding: 5px;
+}
